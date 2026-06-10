@@ -28,8 +28,13 @@ spring:
     show-sql: true
     defer-datasource-initialization: true
 
+logging:
+  level:
+    root: DEBUG
+  config: classpath:config/logback.xml
+
 springdoc:
-  packages-to-scan: kakaopay_securities.back.stocks
+  packages-to-scan: securities.back.stocks
   paths-to-match: /api/v1/**
   swagger-ui:
     path: /api-docs

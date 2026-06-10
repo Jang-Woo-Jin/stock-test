@@ -7,6 +7,9 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.slf4j.Slf4j;
+import securities.back.stocks.api.v1.stock.dto.controller.test.TestDto;
 import securities.back.stocks.api.v1.stock.dto.controller.test.UpdateFieldValueDto;
 import securities.back.stocks.api.v1.stock.service.TestService;
 import securities.back.stocks.common.exception.dto.ExceptionResponseDto;
@@ -15,12 +18,25 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RequiredArgsConstructor
 @RestController
 @Tag(name = "Test", description = "테스트용 정보조작 API")
 @RequestMapping(value = "/api/v1/test")
 public class TestController {
     private final TestService testService;
+
+    @PatchMapping(value = "/테스트")
+    @Operation(summary = " 테스트 API")
+    public ResponseEntity<Void> test(@Valid@RequestBody TestDto.Request reqDto) throws Exception {
+        try {
+            int a = reqDto.getIInput1() / reqDto.getIInput2();
+        } catch (Exception e) {
+            log.error(e.getMessage());
+            throw e;
+        }
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
 
     @PatchMapping(value = "/filed-value")
     @Operation(summary = "특정 데이터 변경 API")

@@ -1,0 +1,7 @@
+2026-06-10 13:06:03.411 DEBUG [RMI TCP Connection(4)-127.0.0.1] [sun.rmi.transport.tcp] - RMI TCP Connection(4)-127.0.0.1: (port 52344) connection closed
+2026-06-10 13:06:03.428 DEBUG [RMI TCP Connection(4)-127.0.0.1] [sun.rmi.transport.tcp] - RMI TCP Connection(4)-127.0.0.1: close connection, socket: Socket[addr=/127.0.0.1,port=52362,localport=52344]
+2026-06-10 13:06:03.429 DEBUG [RMI TCP Connection(4)-127.0.0.1] [sun.rmi.transport.tcp] - RMI TCP Connection(4)-127.0.0.1: socket close: Socket[addr=/127.0.0.1,port=52362,localport=52344]
+2026-06-10 13:06:03.781 DEBUG [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2026-06-10 13:06:03.781 DEBUG [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
+2026-06-10 13:06:33.786 DEBUG [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+2026-06-10 13:06:33.787 DEBUG [HikariPool-1 housekeeper] [com.zaxxer.hikari.pool.HikariPool] - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled.
